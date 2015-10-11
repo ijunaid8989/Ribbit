@@ -18,7 +18,7 @@ class User < ActiveRecord::Base
 	end
 
 	def create_avatar_url
-		self.avatar_url = "http://www/gravatar.com/avatar#{Digest::MD5.hexdigest(self.email)}?s=50"
+		self.avatar_url = "http://www.gravatar.com/avatar/#{Digest::MD5.hexdigest(self.email)}?s=50"
 	end
 
 end

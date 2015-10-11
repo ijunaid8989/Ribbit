@@ -19,11 +19,11 @@
 
 <div id="content">
 	<div class="wrapper">
-		<%= flash.each do |name,msg| %>
-			<% content_tag :div , msg , class: "flash #{name}" %>
+		<% flash.each do |name,msg| %>
+			<%= content_tag :div , msg , class: "flash #{name}" %>
 		<% end %>	
-	</div>
 	<%= yield %>
+	</div>
 </div>
 
 <footer>
