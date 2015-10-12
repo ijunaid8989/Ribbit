@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :ribbits
   resources :sessions
   resources :users
 
