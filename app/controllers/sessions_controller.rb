@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   	if user and user.authenticate(params[:password])
   		session[:user_id] = user.id
       flash[:success] = "You have been logged in"
-  		redirect_to root_url
+  		redirect_to current_user
   	else
   		flash[:error] = "Sorry there is something wrong"
   		redirect_to root_url

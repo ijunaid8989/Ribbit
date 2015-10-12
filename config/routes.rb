@@ -6,8 +6,7 @@ Rails.application.routes.draw do
   get "logout" => "sessions#destroy" , :as => "logout"
 
   root "users#new"
-
-  get "users/:id" => "users#show" , :as => "profile"
+  get "ribbbits" => "ribbits#index" , :as => "ribbbits"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

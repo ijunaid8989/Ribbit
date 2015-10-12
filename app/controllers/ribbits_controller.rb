@@ -9,7 +9,7 @@ class RibbitsController < ApplicationController
 		ribbit.user_id = current_user.id
 
 		flash[:error] = "Sorry Your ribbit is over 140 Chars!" unless ribbit.save
-		redirect_to current_user
+		redirect_to "/ribbits"
 	end
 
 private
