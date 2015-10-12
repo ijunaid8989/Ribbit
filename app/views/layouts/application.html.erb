@@ -3,6 +3,7 @@
 <head>
   <title>Ribbit</title>
   <link rel="stylesheet/less" href="/style.less" />
+  <link rel="stylesheet" type="text/css" href="/custom.css">
   <script src="/less.js"></script>
   <%= csrf_meta_tags %>
 </head>
@@ -10,10 +11,15 @@
 <header>
 	<div class="wrapper">
 		<img src="/gfx/logo.png">
-		<form>
-			<input name="email" type="text">
-			<input name="password" type="password">
-		</form>
+		<% if current_user %>
+			<%= link_to "Logout" , "/logout" %>
+		<% else %>
+			<%= form_tag sessions_path do %>
+			  	<%= text_field_tag :username , nil, placeholder: "Username" %>
+			  	<%= password_field_tag :password , nil, placeholder: "Password" %>
+			  	<%= submit_tag "Login" %>
+			<% end -%>
+		<% end -%>
 	</div>
 </header>
 

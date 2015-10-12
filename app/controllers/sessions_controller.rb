@@ -5,7 +5,8 @@ class SessionsController < ApplicationController
 
   	if user and user.authenticate(params[:password])
   		session[:user_id] = user.id
-  		redirect_to root_url , notice: "Hello!! you have been logged in!!"
+      flash[:success] = "You have been logged in"
+  		redirect_to root_url
   	else
   		flash[:error] = "Sorry there is something wrong"
   		redirect_to root_url
@@ -15,6 +16,7 @@ class SessionsController < ApplicationController
 
   def destroy
   	session[:user_id] = nil
-  	redirect_to root_url , notice: "You have been logged out buddy!!"
+    flash[:warning] = "You have been logged Out!"
+  	redirect_to root_url
   end
 end
