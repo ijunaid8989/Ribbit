@@ -8,7 +8,7 @@ class SessionsController < ApplicationController
       flash[:success] = "You have been logged in"
   		redirect_to current_user
   	else
-  		flash[:error] = "Sorry there is something wrong"
+  		flash[:warning] = "Sorry there is something wrong"
   		redirect_to root_url
   	end
 

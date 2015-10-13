@@ -12,6 +12,12 @@ class RibbitsController < ApplicationController
 		redirect_to "/ribbits"
 	end
 
+	def destroy
+		@ribbit = Ribbit.find(params[:id])
+		@ribbit.destroy
+		redirect_to "/ribbbits"
+	end
+
 private
 
 def ribit_params
