@@ -15,7 +15,7 @@
 </div>
 <div class="panel left">
 	<h1>Ribbts</h1>
-	<% @ribbits.each do |ribbit| %>
+	<% @user.ribbits.each do |ribbit| %>
 	<div class="ribbitWrapper">
 		<img class="avatar" src="<%= @user.avatar_url %>">
 		<span class="name"><%= @user.name %></span> @<%= @user.username %> 

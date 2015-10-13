@@ -10,7 +10,7 @@
 <body>
 <header>
 	<div class="wrapper">
-		<img src="/gfx/logo.png">
+		<%= link_to image_tag('/gfx/logo.png') , root_url %>
 		<% if current_user %>
 			<%= link_to "Public Ribbits" , ribbits_path %> |
 			<%= link_to "Profile" , current_user %> |

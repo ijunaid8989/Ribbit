@@ -19,7 +19,6 @@ class UsersController < ApplicationController
 	def show
 		@user = User.find(params[:id])
 		@ribbit = Ribbit.new
-		@ribbits = @user.ribbits.all
 
 	end
 
