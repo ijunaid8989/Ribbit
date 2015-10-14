@@ -8,6 +8,8 @@ Rails.application.routes.draw do
 
   root "users#new"
   get "ribbbits" => "ribbits#index" , :as => "ribbbits"
+
+  get "buddies" => "users#buddies" , :as => "buddies"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

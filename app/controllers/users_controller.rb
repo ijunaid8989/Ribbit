@@ -26,6 +26,15 @@ class UsersController < ApplicationController
 			).first_or_initialize if current_user
 	end
 
+	def buddies
+		if current_user
+			@ribbit = Ribbit.new
+			buddies_id = current_user.followeds.map(&:id)
+			@ribbits = Ribbit.where(user_id: buddies_id)
+			
+		end
+	end
+
 private
 
 	def user_params
