@@ -15,8 +15,11 @@ And Big Big Thanks to my inspirations in Programming world
 [Sir Jeffery Way](https://twitter.com/jeffrey_way), [Sir José Mota](https://twitter.com/josemotanet) and [Sir Andrew Burgess](https://twitter.com/andrew8088)
 
 
+> **Note:** 2 More features have been added
+> - user can see his **MENTIONS** ,
+> - user can also **delete** tweets
 
-Delet feature has been added but not implemented if you want to add it just copy past this span tag in ribbits/show 
+Tweets Deleting feature in not implemented but if you want it then simply Add SPAN tag in Ribbits/Show with other spans
 
 ```
 <span class="time"><%= button_to "Delete", { action: "destroy", id: ribbit.id }, method: :delete, data: { confirm: "Are you sure?" }%></span>

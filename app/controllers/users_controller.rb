@@ -30,9 +30,12 @@ class UsersController < ApplicationController
 		if current_user
 			@ribbit = Ribbit.new
 			buddies_id = current_user.followeds.map(&:id)
-			@ribbits = Ribbit.where(user_id: buddies_id)
-			
+			@ribbits = Ribbit.where(user_id: buddies_id)	
 		end
+	end
+	def mentions
+		@ribbit = Ribbit.new
+		@ribbits = Ribbit.where("content LIKE ?" ,"%#{current_user.username}%" )
 	end
 
 private
